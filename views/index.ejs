@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random Joke</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <p style="color: red;"><%= joke %></p>
-    <p><%= answer %></p>
+    <h1>Random Joke</h1>
+
+    <% if (joke) { %>
+        <% if (joke.type === "single") { %>
+            <p><%= joke.joke %></p>
+        <% } else { %>
+            <p><%= joke.setup %></p>
+            <p><strong><%= joke.delivery %></strong></p>
+        <% } %>
+    <% } else { %>
+        <p>Error retrieving joke. Try again later.</p>
+    <% } %>
+    
+
 </body>
 </html>

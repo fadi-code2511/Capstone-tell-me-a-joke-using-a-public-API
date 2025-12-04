@@ -1,0 +1,26 @@
+body{
+    padding: 0;
+    margin: 0;
+    /* height: 100%; */
+}
+
+.hero-sec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 237, 237);
+}
+
+.joke-con{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 149, 91);
+    padding: 10px;
+    box-shadow: 7px 5px 3px gray;
+    border-radius: 10px;
+}

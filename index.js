@@ -6,6 +6,7 @@ const port= 3000;
 const apiUrl="https://v2.jokeapi.dev/joke/Any";
 
 // app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/",async(req,res)=>{
     try {

@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Random Joke</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Random Joke</h1>
+    <div class="hero-sec">
+        <div class="joke-con">
+            <h1>Random Joke</h1>
+            <% if (joke) { %>
+                <% if (joke.type === "single") { %>
+                    <p><%= joke.joke %></p>
+                <% } else { %>
+                    <p><%= joke.setup %></p>
+                    <p><strong><%= joke.delivery %></strong></p>
+                <% } %>
+            <% } else { %>
+                <p>Error retrieving joke. Try again later.</p>
+            <% } %>
+        </div>
 
-    <% if (joke) { %>
-        <% if (joke.type === "single") { %>
-            <p><%= joke.joke %></p>
-        <% } else { %>
-            <p><%= joke.setup %></p>
-            <p><strong><%= joke.delivery %></strong></p>
-        <% } %>
-    <% } else { %>
-        <p>Error retrieving joke. Try again later.</p>
-    <% } %>
+    </div>
+    
     
 
 </body>

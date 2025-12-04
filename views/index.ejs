@@ -20,6 +20,19 @@
                 <p>Error retrieving joke. Try again later.</p>
             <% } %>
             <a href="/" class="btn-style">Another joke!</a>
+            <label for="categories" class="l-form">Choose a joke by category:</label>
+            <form action="/joke-by-category" method="post">
+                <select name="category" id="" class="select-cat">
+                    <option value="Any">Any</option>
+                    <option value="Misc">Misc</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Pun">Pun</option>
+                    <option value="Spooky">Spooky</option>
+                    <option value="Christmas">Christmas</option>
+                </select>
+                <button type="submit" class="btn-style margin-10 margin-l-20">Submit</button>
+            </form>            
         </div>
 
     </div>
